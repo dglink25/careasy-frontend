@@ -301,7 +301,7 @@ export default function AIChatWidget() {
       if (!convId) {
         convId = await initConversation();
         if (!convId) {
-          throw new Error('Impossible de démarrer la conversation');
+          throw new Error('Vous ne pouvez pas vous contacter vous même par rapport à votre propre service');
         }
       }
 

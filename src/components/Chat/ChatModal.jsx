@@ -327,7 +327,7 @@ export default function ChatModal({
         setIsReceiverOnline(st.is_online); setLastSeen(st.last_seen_at);
       }
     } catch (e) {
-      setError(e?.response?.data?.message || 'Impossible de démarrer la conversation');
+      setError(e?.response?.data?.message || 'Vous ne pouvez pas vous contacter vous même par rapport à votre propre service');
     } finally { setLoading(false); }
   }, [user, receiverId, conversationId, existingConversation, serviceId]);
 
